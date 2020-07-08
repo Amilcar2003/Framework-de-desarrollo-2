@@ -2,13 +2,13 @@
  <div class="col-12">
  <ul class="nav alert-primary">
  <li class="nav-item">
- <h4>USUARIO:</h4>
+ <h4>Usuario:{$usuario}</h4>
  </li>
  <li class="nav-item">
  ________________________________
  </li>
  <li class ="nav-item">
- <h4> TIPO: </h4>
+ <h4> Tipo:{$tipo} </h4>
  </li>
  </ul>
  </div>
@@ -19,18 +19,34 @@
  <ul class ="nav flex-colum alert-danger">
  <br><br><br>
  <li class="nav-item">
- <a class="nav-link active"href="#">Crear Usuario/a>
+ <a class="nav-link active"href="?controller=Operaciones&action=VentanaCrearUsuario">Crear Usuario</a>
  </li>
  <li class"nav-item">
- <a class="nav-link" href="#">Habilitar/Desahabilitar Usuario</a>
+ <a class="nav-link" href="?controller=Operaciones&action=VentanaHDUuser">Habilitar/Desahabilitar Usuario</a>
  </li>
  <li class"nav-item">
- <a class="nav-link" href="#">Habilitar/Ver Inventario</a>
+ <a class="nav-link" href="?controller=Operaciones&action=VentanaVerInventario">Ver Inventario</a>
  </li><br><br><br>
  </ul>
  </div>
 
  <div class="col-9">
-  {include file="AdminHDUser.tpl"}
+  {if isset($ventana)}
+
+  {if $ventana=="vcu"}
+  {include file='AdminCrearUser.tpl'}
+
+  {else if $ventana="vhdu"}
+  {include file='AdminHDUser.tpl'}
+
+  {else if $ventana="vvi"}
+  <p>ventana ver inventario</p>
+  {else}
+
+  {/if}
+
+  {else}
+  <p>Info de la empresa</p>
+  {/if}
   </div>
   </div>

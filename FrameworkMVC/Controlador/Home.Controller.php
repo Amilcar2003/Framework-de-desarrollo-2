@@ -15,11 +15,9 @@
        $smarty = new Smarty();
 	   $smarty->display('Default.tpl');
     }
-	public function Fun2()
+	public function FuncionX()
 	{
-		$model = new Usuarios();
-		$consulta=$model->BuscarUsuario("Amilcar", 123);
-		var_dump($consulta);
+		
 	}
 
   }

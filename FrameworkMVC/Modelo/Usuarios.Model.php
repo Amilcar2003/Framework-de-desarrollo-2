@@ -1,12 +1,13 @@
 <?php
    class Usuarios
    {
-   	   public function BuscarUsuario($usuario, $contraseña)
+   	   public function BuscarUsuario($user, $pass, $tipo)
 	   {
 	   	   $con=new Conexion();
-		   $q="SELECT * FROM `usuarios` WHERE `usuario`='$usuario' AND `contraseña`='$contraseña';";
-		   $resultado=$con->query($q);
-		   return $resultado;
+		   $q="SELECT * FROM `usuario` WHERE `user`='$user' AND `password`='$pass'  AND `tipo`='$tipo';";
+		   $usuario=$con->query($q);
+		   $con->close();
+		   return $usuario;
 	   }
    }
 ?>

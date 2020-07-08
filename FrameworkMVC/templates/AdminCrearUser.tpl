@@ -8,13 +8,13 @@
 </div><br>
 <div class="form-group">
 <label for="password">Password</label>
-<input type ="password" class="form-control" id="password" name="password" aria-describedby="emailHelp">
+<input type ="password" class="form-control" name="password" id="password">
 </div><br>
 <div class="form-group">
-<label for="tipo"Tipo de trabajador</label>
+<label for="tipo">Tipo de trabajador</label>
 <select class="form-control"name="tipo" id="tipo">
-<option value="Trabajador"Trabajador</option>
-<option value="Administrador"Administrador</option>
+<option value="Trabajador">Trabajador</option>
+<option value="Administrador">Administrador</option>
 </select>
 </div><br>
 <button type="submit" class="btn btn-primary">Guardar Usuario</button>
